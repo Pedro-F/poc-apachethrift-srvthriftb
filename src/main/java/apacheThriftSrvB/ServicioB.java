@@ -49,7 +49,7 @@ public class ServicioB {
 				 RespuestaNoThriftStock outServicioC = restTemplate.postForObject("http://no-thrift-srvc:8080/servicioC", inServicioC, RespuestaNoThriftStock.class);
 				
 				 // añadimos el stock y la prenda
-				 prenda.setStock(outServicioC.getCuerpo().get("stock"));	 
+				 prenda.setStock(outServicioC.getStock());	 
 				 listadoPrendas.add(prenda);
 			 
 			 }
@@ -92,13 +92,13 @@ public class ServicioB {
 	 * @return
 	 */
 	private RequestMessageStock convertPrendaNoThrift_TO_RequestMessageStock(PrendaNoThrift prenda, MensajeInServicioNoThrift mensajeIn){
+		RequestMessageStock inSrvC = new RequestMessageStock();
 		
-		Map<String,String> cuerpo = new HashMap<String,String>();
-		cuerpo.put("nombre",prenda.getNombre());
-		cuerpo.put("talla",prenda.getTalla());
-		cuerpo.put("color",prenda.getColor());
+		inSrvC.setNombre(prenda.getNombre());
+		inSrvC.setTalla(prenda.getTalla());
+		inSrvC.setColor(prenda.getColor());
 		
-		return new RequestMessageStock(mensajeIn.getCabecera(),cuerpo);
+		return inSrvC;
 	}
 
 	/*******************************************
