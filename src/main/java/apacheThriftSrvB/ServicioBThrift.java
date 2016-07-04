@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.ws.rs.POST;
+
 import org.apache.thrift.TException;
 import org.apache.thrift.protocol.TJSONProtocol;
 import org.apache.thrift.protocol.TProtocol;
@@ -12,14 +14,15 @@ import org.apache.thrift.transport.TFramedTransport;
 import org.apache.thrift.transport.TSocket;
 import org.apache.thrift.transport.TTransport;
 
+
 public class ServicioBThrift implements ThriftService.Iface {
 
 	List<PrendaThrift> prendas;
-
+	
 	public ServicioBThrift() {
 		prendas = PrendaDao.instance.getPrendas();
 	}
-
+	
 	public MensajeOutServicio recuperaPrendas(MensajeInServicio mensajeIn) throws TException {
 		MensajeOutServicio respuesta = new MensajeOutServicio();
 		List<PrendaThrift> listadoPrendas = new ArrayList<PrendaThrift>();
