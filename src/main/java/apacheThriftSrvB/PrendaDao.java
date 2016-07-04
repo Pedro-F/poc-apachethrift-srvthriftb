@@ -7,7 +7,8 @@ import java.util.List;
 public enum PrendaDao{
 	instance;
 
-	private List<PrendaNoThrift> prendas;
+	private List<PrendaThrift> prendas;
+
 
 	private PrendaDao() {
 		String parrafada = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et lacus a nisl "
@@ -98,36 +99,37 @@ public enum PrendaDao{
 				+ "magna aliquam pretium nec sit amet diam. Maecenas ligula ex, egestas id posuere et, blandit sit "
 				+ "amet mauris.";
 		
-		this.prendas = new ArrayList<PrendaNoThrift>();
-		PrendaNoThrift p = new PrendaNoThrift("Prenda1", TipoNoThrift.CAMISA, "40", "Azul", parrafada, "0");
+		
+		this.prendas = new ArrayList<PrendaThrift>();
+		PrendaThrift p = new PrendaThrift("Prenda1", TipoThrift.CAMISA, "40", "Azul", parrafada, "0");
 		this.prendas.add(p);
-		p = new PrendaNoThrift("Prenda1", TipoNoThrift.CAMISA, "40", "Verde", parrafada, "0");
+		p = new PrendaThrift("Prenda1", TipoThrift.CAMISA, "40", "Verde", parrafada, "0");
 		this.prendas.add(p);
-		p = new PrendaNoThrift("Prenda1", TipoNoThrift.CAMISA, "38", "Azul", parrafada, "0");
+		p = new PrendaThrift("Prenda1", TipoThrift.CAMISA, "38", "Azul", parrafada, "0");
 		this.prendas.add(p);
-		p = new PrendaNoThrift("Prenda2", TipoNoThrift.CAMISA, "36", "Rojo", parrafada, "0");
+		p = new PrendaThrift("Prenda2", TipoThrift.CAMISA, "36", "Rojo", parrafada, "0");
 		this.prendas.add(p);
-		p = new PrendaNoThrift("Prenda2", TipoNoThrift.CAMISA, "38", "Rojo", parrafada, "0");
+		p = new PrendaThrift("Prenda2", TipoThrift.CAMISA, "38", "Rojo", parrafada, "0");
 		this.prendas.add(p);
-		p = new PrendaNoThrift("Prenda2", TipoNoThrift.CAMISA, "40", "Rojo", parrafada, "0");
+		p = new PrendaThrift("Prenda2", TipoThrift.CAMISA, "40", "Rojo", parrafada, "0");
 		this.prendas.add(p);
-		p = new PrendaNoThrift("Prenda3", TipoNoThrift.PANTALON, "42", "Verde", parrafada, "0");
+		p = new PrendaThrift("Prenda3", TipoThrift.PANTALON, "42", "Verde", parrafada, "0");
 		this.prendas.add(p);
-		p = new PrendaNoThrift("Prenda3", TipoNoThrift.PANTALON, "42", "Blanco", parrafada, "0");
+		p = new PrendaThrift("Prenda3", TipoThrift.PANTALON, "42", "Blanco", parrafada, "0");
 		this.prendas.add(p);
-		p = new PrendaNoThrift("Prenda4", TipoNoThrift.ZAPATO, "40", "Azul", parrafada, "0");
+		p = new PrendaThrift("Prenda4", TipoThrift.ZAPATO, "40", "Azul", parrafada, "0");
 		this.prendas.add(p);
-		p = new PrendaNoThrift("Prenda5", TipoNoThrift.ZAPATO, "38", "Negro", parrafada, "0");
+		p = new PrendaThrift("Prenda5", TipoThrift.ZAPATO, "38", "Negro", parrafada, "0");
 		this.prendas.add(p);
-		p = new PrendaNoThrift("Prenda5", TipoNoThrift.ZAPATO, "40", "Rojo", parrafada, "0");
+		p = new PrendaThrift("Prenda5", TipoThrift.ZAPATO, "40", "Rojo", parrafada, "0");
 		this.prendas.add(p);
-		p = new PrendaNoThrift("Prenda5", TipoNoThrift.ZAPATO, "36", "Negro", parrafada, "0");
+		p = new PrendaThrift("Prenda5", TipoThrift.ZAPATO, "36", "Negro", parrafada, "0");
 		this.prendas.add(p);
-		p = new PrendaNoThrift("Prenda5", TipoNoThrift.ZAPATO, "38", "Rojo", parrafada, "0");
+		p = new PrendaThrift("Prenda5", TipoThrift.ZAPATO, "38", "Rojo", parrafada, "0");
 		this.prendas.add(p);
 	}
 
-	public List<PrendaNoThrift> getPrendas() {
+	public List<PrendaThrift> getPrendas() {
 		return prendas;
 	}
 
