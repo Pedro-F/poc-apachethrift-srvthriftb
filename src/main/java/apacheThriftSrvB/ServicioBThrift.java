@@ -33,7 +33,7 @@ public class ServicioBThrift implements ThriftService.Iface {
 			if (prenda.getTipo().equals(TipoThrift.findByValue(Integer.parseInt(mensajeIn.getCuerpo().get("TipoPrenda"))))
 					&& prenda.getColor().toUpperCase().equals(mensajeIn.getCuerpo().get("Color").toUpperCase())) {
 				try {
-					TTransport transport = new TFramedTransport(new TSocket("http://thrift-srvc:8080/servicioC", 9095)); 
+					TTransport transport = new TFramedTransport(new TSocket("thrift-srvc", 9095)); 
 			        TProtocol protocol = new TJSONProtocol(transport); 
 			        ThriftServiceStock.Client clientC = new ThriftServiceStock.Client(protocol); 
 			        transport.open();
