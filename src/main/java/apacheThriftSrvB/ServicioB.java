@@ -100,7 +100,7 @@ public class ServicioB {
 			TThreadPoolServer.Args serverArgs = new TThreadPoolServer.Args(serverTransport);
 			serverArgs.processor(processor);
 			TServer server =  new TThreadPoolServer(serverArgs);*/
-			TServerTransport serverTransport = new TServerSocket(9092);
+			TServerTransport serverTransport = new TServerSocket(9094);
 			TServer server = new TThreadPoolServer(new TThreadPoolServer.Args(serverTransport)
 			            .processor(processor).protocolFactory(new TJSONProtocol.Factory())
 			            .inputTransportFactory(new TFramedTransport.Factory())
