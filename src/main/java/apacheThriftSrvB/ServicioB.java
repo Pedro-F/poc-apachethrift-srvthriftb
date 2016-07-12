@@ -54,6 +54,7 @@ public class ServicioB {
         return new TServlet(new ThriftService.Processor<ServicioBThrift>(handler), protocolFactory);
     }
 
+    
  
 	/*******************************************
 	 * MAIN *
