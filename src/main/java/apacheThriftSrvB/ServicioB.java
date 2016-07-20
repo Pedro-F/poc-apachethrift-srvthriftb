@@ -56,13 +56,13 @@ public class ServicioB {
 
     
  
-	/*******************************************
-	 * MAIN *
-	 * 
-	 * @param args
-	 *            *
-	 * @throws Exception
-	 *             *
+    /*******************************************
+	 * MAIN                                    *
+	 *                                         *
+	 * @param args                             *
+	 *                                         *
+	 * @throws Exception                       *
+	 *                                         *
 	 ******************************************/
 	public static void main(String[] args) throws Exception {
 		
