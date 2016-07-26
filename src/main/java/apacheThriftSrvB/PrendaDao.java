@@ -103,13 +103,6 @@ public enum PrendaDao{
 		this.prendas = new ArrayList<PrendaThrift>();
 		PrendaThrift p = new PrendaThrift("Prenda1", TipoThrift.CAMISA, "40", "Azul", parrafada, "0");
 		this.prendas.add(p);
-		
-		for(int i =0; i<30 ;i++){
-			p = new PrendaThrift("Prenda1", TipoThrift.CAMISA, String.valueOf(i), "Verde", parrafada, "0");
-			this.prendas.add(p);
-		}
-		
-		
 		p = new PrendaThrift("Prenda1", TipoThrift.CAMISA, "40", "Verde", parrafada, "0");
 		this.prendas.add(p);
 		p = new PrendaThrift("Prenda1", TipoThrift.CAMISA, "38", "Azul", parrafada, "0");
